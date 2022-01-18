@@ -16,13 +16,16 @@
 </h:head>
 <h:body>
 	<h:form>
+		<p:growl id="menGen" />
 		<p:panel header="Credenciales">
 			<p:panelGrid id="panGriLog" columns="2">
 				<p:outputLabel for="txtNomUsu" value="Usuario:" />
-				<p:inputText id="txtNomUsu" maxlength="10" required="true" />
+				<p:inputText id="txtNomUsu" maxlength="10" required="true"
+					value="#{loginBean.usuario.nombreUsu}" />
 				<p:outputLabel for="txpClaUsu" value="Clave:" />
 				<p:password id="txpClaUsu" maxlength="10" required="true"
-					toggleMask="true" redisplay="true" />
+					value="#{loginBean.usuario.claveUsu}" toggleMask="true"
+					redisplay="true" />
 			</p:panelGrid>
 			<p:panelGrid id="panGriBot" columns="1">
 				<p:commandButton value="Ingresar" icon="fas fa-sign-in-alt"/>
