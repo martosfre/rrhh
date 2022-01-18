@@ -37,10 +37,11 @@
 			<artifactId>primefaces-extensions</artifactId>
 			<version>${primefaces-extensions.version}</version>
 		</dependency>
+		<!--Dependencia Font Awesome - Iconos-->
 		<dependency>
-			<groupId>org.primefaces.extensions</groupId>
-			<artifactId>resources-ckeditor</artifactId>
-			<version>${primefaces-extensions.version}</version>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>5.12.0</version>
 		</dependency>
 		<!-- Dependency on the EJB module -->
 		<dependency>
