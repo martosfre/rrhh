@@ -12,6 +12,8 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 import ec.mil.ejercito.finanzas.rrhh.util.Usuario;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Clase para administrar la página d Login
@@ -28,6 +30,7 @@ public class LoginBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Getter @Setter
 	private Usuario usuario;
 
 	public LoginBean() {

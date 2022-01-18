@@ -15,7 +15,7 @@
 	<h:outputScript library="js" name="rrhh.js"></h:outputScript>
 </h:head>
 <h:body>
-	<h:form>
+	<h:form id="frmGen">
 		<p:growl id="menGen" />
 		<p:panel header="Credenciales">
 			<p:panelGrid id="panGriLog" columns="2">
@@ -28,7 +28,10 @@
 					redisplay="true" />
 			</p:panelGrid>
 			<p:panelGrid id="panGriBot" columns="1">
-				<p:commandButton value="Ingresar" icon="fas fa-sign-in-alt"/>
+				<p:commandButton value="Ingresar" icon="fas fa-sign-in-alt"
+					process="@this :frmGen:panGriLog"
+					actionListener="#{loginBean.validadUsuario}" 
+					update=":frmGen:menGen"/>
 			</p:panelGrid>
 		</p:panel>
 	</h:form>
