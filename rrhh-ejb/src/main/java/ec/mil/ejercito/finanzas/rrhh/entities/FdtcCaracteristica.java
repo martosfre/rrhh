@@ -22,12 +22,12 @@ public class FdtcCaracteristica implements Serializable {
 
 	//bi-directional many-to-one association to FcarActivo
 	@ManyToOne
-	@JoinColumn(name="CAR_SECUEN")
+	@JoinColumn(name="CAR_SECUEN", insertable=false, updatable=false)
 	private FcarActivo fcarActivo;
 
 	//bi-directional many-to-one association to FinvInven
 	@ManyToOne
-	@JoinColumn(name="INV_SECUEN")
+	@JoinColumn(name="INV_SECUEN",insertable=false, updatable=false)
 	private FinvInven finvInven;
 
 	public FdtcCaracteristica() {

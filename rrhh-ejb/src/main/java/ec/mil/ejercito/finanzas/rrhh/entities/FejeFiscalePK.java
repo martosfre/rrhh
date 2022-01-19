@@ -15,7 +15,7 @@ public class FejeFiscalePK implements Serializable {
 	@Column(name="UNI_CODIGO2", insertable=false, updatable=false)
 	private String uniCodigo2;
 
-	@Column(name="EJE_ANIO")
+	@Column(name="EJE_ANIO", insertable=false, updatable=false)
 	private long ejeAnio;
 
 	public FejeFiscalePK() {

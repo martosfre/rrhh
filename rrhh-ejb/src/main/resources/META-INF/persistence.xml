@@ -17,7 +17,7 @@
 		<!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
 
 		<!-- 3)Configuración Datasource -->
-		<jta-data-source>java:/FinanzasDs</jta-data-source>
+		<jta-data-source>java:/FinanzasDS</jta-data-source>
 		
 		<!-- 4)Configuración Mapeo
 				- Mapear manual (explícitamente) -> <class>ec.mil.ejercito.Prueba</>

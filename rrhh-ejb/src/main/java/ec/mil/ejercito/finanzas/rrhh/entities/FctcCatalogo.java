@@ -27,8 +27,8 @@ public class FctcCatalogo implements Serializable {
 	//bi-directional many-to-one association to FctcCatalogo
 	@ManyToOne
 	@JoinColumns({
-		@JoinColumn(name="FCT_CTC_SECUEN", referencedColumnName="CTC_SECUEN"),
-		@JoinColumn(name="FCTC_CTC_ANIO", referencedColumnName="CTC_ANIO")
+		@JoinColumn(name="FCT_CTC_SECUEN", referencedColumnName="CTC_SECUEN", insertable = false, updatable = false),
+		@JoinColumn(name="FCTC_CTC_ANIO", referencedColumnName="CTC_ANIO", insertable = false, updatable = false)
 		})
 	private FctcCatalogo fctcCatalogo;
 

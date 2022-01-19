@@ -12,10 +12,10 @@ public class FcntCantonePK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="PRV_CODIGO")
+	@Column(name="PRV_CODIGO", insertable=false, updatable=false)
 	private String prvCodigo;
 
-	@Column(name="CAN_CODIGO")
+	@Column(name="CAN_CODIGO", insertable=false, updatable=false)
 	private String canCodigo;
 
 	public FcntCantonePK() {

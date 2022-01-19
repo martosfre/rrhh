@@ -33,9 +33,9 @@ public class FsmsSaldomensual implements Serializable {
 	//bi-directional many-to-one association to FperPeriodo
 	@ManyToOne
 	@JoinColumns({
-		@JoinColumn(name="EJE_ANIO", referencedColumnName="EJE_ANIO"),
-		@JoinColumn(name="FPE_UNI_CODIGO2", referencedColumnName="UNI_CODIGO2"),
-		@JoinColumn(name="PEA_MES", referencedColumnName="PEA_MES")
+		@JoinColumn(name="EJE_ANIO", referencedColumnName="EJE_ANIO", insertable=false, updatable=false),
+		@JoinColumn(name="FPE_UNI_CODIGO2", referencedColumnName="UNI_CODIGO2", insertable=false, updatable=false),
+		@JoinColumn(name="PEA_MES", referencedColumnName="PEA_MES", insertable=false, updatable=false)
 		})
 	private FperPeriodo fperPeriodo;
 

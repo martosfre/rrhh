@@ -29,7 +29,7 @@ public class FcarPortafolio implements Serializable {
 
 	//bi-directional many-to-one association to FdciDetciu
 	@ManyToOne
-	@JoinColumn(name="FDC_DCI_CODIGO")
+	@JoinColumn(name="FDC_DCI_CODIGO", insertable = false, updatable = false)
 	private FdciDetciu fdciDetciu;
 
 	public FcarPortafolio() {

@@ -5,19 +5,17 @@ package ec.mil.ejercito.finanzas.rrhh.controllers;
 
 import javax.persistence.EntityManager;
 
-import ec.mil.ejercito.finanzas.rrhh.entities.FtmoTipmovimiento;
-
 /**
  * @author martosfre
  *
  */
 public abstract class AbstractController<T> {
-	private T entidad;
+	private Class<T> entidad;
 
 	/**
-	 * @param entidad
+	 * @param 
 	 */
-	public AbstractController(T entidad) {
+	public AbstractController(Class<T> entidad) {
 		this.entidad = entidad;
 	}
 	

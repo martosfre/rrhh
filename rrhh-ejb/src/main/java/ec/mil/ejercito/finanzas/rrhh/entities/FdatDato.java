@@ -65,17 +65,17 @@ public class FdatDato implements Serializable {
 	//bi-directional many-to-one association to FctcCatalogo
 	@ManyToOne
 	@JoinColumns({
-		@JoinColumn(name="CTC_ANIO", referencedColumnName="CTC_ANIO"),
-		@JoinColumn(name="CTC_SECUEN", referencedColumnName="CTC_SECUEN")
+		@JoinColumn(name="CTC_ANIO", referencedColumnName="CTC_ANIO", insertable = false, updatable = false),
+		@JoinColumn(name="CTC_SECUEN", referencedColumnName="CTC_SECUEN", insertable = false, updatable = false)
 		})
 	private FctcCatalogo fctcCatalogo;
 
 	//bi-directional many-to-one association to FdatDato
 	@ManyToOne
 	@JoinColumns({
-		@JoinColumn(name="FDA_CTC_ANIO", referencedColumnName="CTC_ANIO"),
-		@JoinColumn(name="FDA_CTC_SECUEN", referencedColumnName="CTC_SECUEN"),
-		@JoinColumn(name="FDA_DAT_CODIGO", referencedColumnName="DAT_CODIGO")
+		@JoinColumn(name="FDA_CTC_ANIO", referencedColumnName="CTC_ANIO",insertable = false, updatable = false),
+		@JoinColumn(name="FDA_CTC_SECUEN", referencedColumnName="CTC_SECUEN", insertable = false, updatable = false),
+		@JoinColumn(name="FDA_DAT_CODIGO", referencedColumnName="DAT_CODIGO", insertable=false, updatable=false)
 		})
 	private FdatDato fdatDato;
 

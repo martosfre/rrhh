@@ -19,8 +19,8 @@ public class ModelosController extends AbstractController<FasiModelo> {
 	@PersistenceContext(unitName = "finanzasPU")
 	private EntityManager em;
 	
-	public ModelosController(FasiModelo entidad) {
-		super(entidad);
+	public ModelosController() {
+		super(FasiModelo.class);
 	}
 
 	@Override

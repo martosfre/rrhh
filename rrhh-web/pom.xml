@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>rrhh-web</artifactId>
 	<packaging>war</packaging>
-	<name>jakartaee8-archetype - web</name>
+	<name>rrhh-web</name>
 	<description>This is the web POM file</description>
 
 	<dependencies>

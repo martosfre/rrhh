@@ -19,7 +19,7 @@ public class FmffMatriz implements Serializable {
 
 	//bi-directional many-to-one association to FcncConcepto
 	@ManyToOne
-	@JoinColumn(name="CNC_SECUEN")
+	@JoinColumn(name="CNC_SECUEN", insertable=false, updatable=false)
 	private FcncConcepto fcncConcepto;
 
 	public FmffMatriz() {

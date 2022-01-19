@@ -12,10 +12,10 @@ public class FparPresupPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="PAR_CODIGO")
+	@Column(name="PAR_CODIGO", insertable=false, updatable=false)
 	private String parCodigo;
 
-	@Column(name="PAR_ANIO")
+	@Column(name="PAR_ANIO", insertable=false, updatable=false)
 	private long parAnio;
 
 	public FparPresupPK() {

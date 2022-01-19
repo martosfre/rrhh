@@ -12,16 +12,16 @@ public class FsctContablePK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="FEJ_UNI_CODIGO2", insertable=false, updatable=false)
+	@Column(name="FEJ_UNI_CODIGO2")
 	private String fejUniCodigo2;
 
-	@Column(name="EJE_ANIO", insertable=false, updatable=false)
+	@Column(name="EJE_ANIO")
 	private long ejeAnio;
 
-	@Column(name="CTC_SECUEN")
+	@Column(name="CTC_SECUEN", insertable=false, updatable=false)
 	private String ctcSecuen;
 
-	@Column(name="DAT_CODIGO")
+	@Column(name="DAT_CODIGO", insertable=false, updatable=false)
 	private String datCodigo;
 
 	public FsctContablePK() {

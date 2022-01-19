@@ -12,10 +12,10 @@ public class FdtcCaracteristicaPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="INV_SECUEN", insertable=false, updatable=false)
+	@Column(name="INV_SECUEN")
 	private long invSecuen;
 
-	@Column(name="CAR_SECUEN", insertable=false, updatable=false)
+	@Column(name="CAR_SECUEN")
 	private long carSecuen;
 
 	public FdtcCaracteristicaPK() {

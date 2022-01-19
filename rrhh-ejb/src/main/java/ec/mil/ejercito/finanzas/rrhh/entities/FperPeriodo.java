@@ -49,8 +49,8 @@ public class FperPeriodo implements Serializable {
 	//bi-directional many-to-one association to FejeFiscale
 	@ManyToOne
 	@JoinColumns({
-		@JoinColumn(name="EJE_ANIO", referencedColumnName="EJE_ANIO"),
-		@JoinColumn(name="UNI_CODIGO2", referencedColumnName="UNI_CODIGO2")
+		@JoinColumn(name="EJE_ANIO", referencedColumnName="EJE_ANIO", insertable=false, updatable=false),
+		@JoinColumn(name="UNI_CODIGO2", referencedColumnName="UNI_CODIGO2", insertable=false, updatable=false)
 		})
 	private FejeFiscale fejeFiscale;
 

@@ -12,13 +12,13 @@ public class FperPeriodoPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="UNI_CODIGO2", insertable=false, updatable=false)
+	@Column(name="UNI_CODIGO2")
 	private String uniCodigo2;
 
-	@Column(name="EJE_ANIO", insertable=false, updatable=false)
+	@Column(name="EJE_ANIO")
 	private long ejeAnio;
 
-	@Column(name="PEA_MES")
+	@Column(name="PEA_MES", insertable=false, updatable=false)
 	private long peaMes;
 
 	public FperPeriodoPK() {

@@ -12,16 +12,16 @@ public class FmatMatrizContablePK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="FDA_CTC_SECUEN")
+	@Column(name="FDA_CTC_SECUEN", insertable=false, updatable=false)
 	private String fdaCtcSecuen;
 
 	@Column(name="CTC_SECUEN")
 	private String ctcSecuen;
 
-	@Column(name="FDA_DAT_CODIGO")
+	@Column(name="FDA_DAT_CODIGO", insertable=false, updatable=false)
 	private String fdaDatCodigo;
 
-	@Column(name="DAT_CODIGO")
+	@Column(name="DAT_CODIGO", insertable=false, updatable=false)
 	private String datCodigo;
 
 	public FmatMatrizContablePK() {

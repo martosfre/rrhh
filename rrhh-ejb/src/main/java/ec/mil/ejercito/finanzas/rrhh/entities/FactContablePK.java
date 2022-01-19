@@ -12,10 +12,10 @@ public class FactContablePK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="ACT_SECCON")
+	@Column(name="ACT_SECCON", insertable = false, updatable = false)
 	private long actSeccon;
 
-	@Column(name="ACT_ANIO")
+	@Column(name="ACT_ANIO", insertable = false, updatable = false)
 	private long actAnio;
 
 	public FactContablePK() {

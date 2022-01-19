@@ -12,25 +12,25 @@ public class FmffMatrizPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="FDA3_CTC_SECUEN")
+	@Column(name="FDA3_CTC_SECUEN", insertable=false, updatable=false )
 	private String fda3CtcSecuen;
 
-	@Column(name="FDA2_DAT_CODIGO")
+	@Column(name="FDA2_DAT_CODIGO", insertable=false, updatable=false)
 	private String fda2DatCodigo;
 
-	@Column(name="FDA2_CTC_SECUEN")
+	@Column(name="FDA2_CTC_SECUEN", insertable=false, updatable=false)
 	private String fda2CtcSecuen;
 
-	@Column(name="FDA_DAT_CODIGO")
+	@Column(name="FDA_DAT_CODIGO", insertable=false, updatable=false)
 	private String fdaDatCodigo;
 
-	@Column(name="FDA_CTC_SECUEN")
+	@Column(name="FDA_CTC_SECUEN", insertable=false, updatable=false)
 	private String fdaCtcSecuen;
 
-	@Column(name="DAT_CODIGO")
+	@Column(name="DAT_CODIGO", insertable=false, updatable=false)
 	private String datCodigo;
 
-	@Column(name="CNC_SECUEN", insertable=false, updatable=false)
+	@Column(name="CNC_SECUEN")
 	private long cncSecuen;
 
 	public FmffMatrizPK() {

@@ -12,13 +12,13 @@ public class FcarPortafolioPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="FDC_DCI_CODIGO", insertable=false, updatable=false)
+	@Column(name="FDC_DCI_CODIGO")
 	private long fdcDciCodigo;
 
-	@Column(name="CTC_SECUEN")
+	@Column(name="CTC_SECUEN", insertable = false, updatable = false)
 	private String ctcSecuen;
 
-	@Column(name="DAT_CODIGO")
+	@Column(name="DAT_CODIGO",insertable=false, updatable=false)
 	private String datCodigo;
 
 	public FcarPortafolioPK() {

@@ -12,13 +12,13 @@ public class FpppParamparPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="PPP_TIPO")
+	@Column(name="PPP_TIPO", insertable=false, updatable=false)
 	private String pppTipo;
 
-	@Column(name="PPP_ANIO")
+	@Column(name="PPP_ANIO", insertable=false, updatable=false)
 	private long pppAnio;
 
-	@Column(name="PPP_ORDEN")
+	@Column(name="PPP_ORDEN", insertable=false, updatable=false)
 	private long pppOrden;
 
 	public FpppParamparPK() {

@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>rrhh-ear</artifactId>
 	<packaging>ear</packaging>
-	<name>jakartaee8-archetype - ear</name>
+	<name>>rrhh-ear</name>
 	<description>This is the EAR POM file</description>
 
 	<dependencies>

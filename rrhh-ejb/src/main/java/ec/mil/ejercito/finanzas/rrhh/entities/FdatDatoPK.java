@@ -12,13 +12,13 @@ public class FdatDatoPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="CTC_SECUEN", insertable=false, updatable=false)
+	@Column(name="CTC_SECUEN")
 	private String ctcSecuen;
 
 	@Column(name="DAT_CODIGO")
 	private String datCodigo;
 
-	@Column(name="CTC_ANIO", insertable=false, updatable=false)
+	@Column(name="CTC_ANIO")
 	private long ctcAnio;
 
 	public FdatDatoPK() {
