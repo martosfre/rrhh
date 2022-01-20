@@ -12,9 +12,15 @@
 				<h:outputText value="Administración Tipo Movimiento" />
 			</p:toolbarGroup>
 			<p:toolbarGroup align="left">
-				<p:commandButton value="Guardar" icon="fas fa-save" />
-				<p:commandButton value="Editar" icon="fas fa-edit" />
-				<p:commandButton value="Eliminar" icon="fas fa-trash" />
+				<p:commandButton value="Guardar" icon="fas fa-save"
+					process="@this :frmGen:panGriTipMov"
+					actionListener="#{tipoMovimientoBean.guardar}"
+					update=":frmGen:menGen :frmGen:datTabTipMov :frmGen:panGriTipMov" />
+				<p:commandButton value="Editar" icon="fas fa-edit" process="@this"
+					actionListener="#{tipoMovimientoBean.editar}"
+					update=":frmGen:panGriTipMov" />
+				<p:commandButton value="Eliminar" icon="fas fa-trash"
+					onclick="PF('diaConEli').show()" />
 			</p:toolbarGroup>
 		</p:toolbar>
 		<br></br>
@@ -37,7 +43,7 @@
 			<p:outputLabel for="selBolConTipMov" value="Conciliable:" />
 			<p:selectBooleanCheckbox id="selBolConTipMov"
 				itemLabel="Es Concialiable?"
-				value="#{tipoMovimientoBean.tipoMovimiento.tmoConciliable}" />
+				value="#{tipoMovimientoBean.esConciliable}" />
 
 			<p:outputLabel for="cmbDebHabTipMov" value="Tipo Asiento:" />
 			<p:selectOneRadio id="cmbDebHabTipMov" unselectable="true"
@@ -52,6 +58,8 @@
 			value="#{tipoMovimientoBean.listaTipoMovimiento}" var="tipMov"
 			rowKey="#{tipMov.tmoCodigo}" selectionMode="single" paginator="true"
 			rows="10">
+			<p:ajax event="rowSelect"
+				listener="#{tipoMovimientoBean.seleccionarRegistro}" />
 			<p:column headerText="Módulo">
 				<h:outputText value="#{tipMov.tmoModulo}" />
 			</p:column>
@@ -70,6 +78,15 @@
 			</p:column>
 		</p:dataTable>
 
+		<p:dialog widgetVar="diaConEli" header="Confirmar Elimación">
+			<h:outputText value="¿Está seguro de eliminar el registro?" />
+			<br></br>
+			<p:commandButton value="Si" process="@this"
+				actionListener="#{tipoMovimientoBean.eliminar}"
+				update=":frmGen:menGen :frmGen:datTabTipMov" 
+				oncomplete="PF('diaConEli').hide()"/>
+			<p:commandButton value="No" onclick="PF('diaConEli').hide()"/>	
+		</p:dialog>
 	</ui:define>
 
 </ui:composition>
