@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/templatePrincipal.xhtml">
+
+	<ui:define name="contenido">
+		<p:toolbar>
+			<p:toolbarGroup align="right">
+				<h:outputText value="Administración Tipo Movimiento" />
+			</p:toolbarGroup>
+			<p:toolbarGroup align="left">
+				<p:commandButton value="Guardar" icon="fas fa-save" />
+				<p:commandButton value="Editar" icon="fas fa-edit" />
+				<p:commandButton value="Eliminar" icon="fas fa-trash" />
+			</p:toolbarGroup>
+		</p:toolbar>
+		<br></br>
+		<p:panelGrid id="panGriTipMov" columns="4" layout="grid">
+			<p:outputLabel for="selOneRadModMov" value="Módulo:" />
+			<p:selectOneRadio id="selOneRadModMov" unselectable="true">
+				<f:selectItem itemLabel="Contabilidad" itemValue="C" />
+				<f:selectItem itemLabel="Tesorería" itemValue="T" />
+			</p:selectOneRadio>
+
+			<p:outputLabel for="txtNomTipMov" value="Nombre:" />
+			<p:inputText id="txtNomTipMov" maxlength="100" required="true" />
+
+			<p:outputLabel for="txtAbreTipMov" value="Abreviatura:" />
+			<p:inputText id="txtAbreTipMov" maxlength="3" required="true" />
+
+			<p:outputLabel for="selBolConTipMov" value="Conciliable:" />
+			<p:selectBooleanCheckbox id="selBolConTipMov"
+				itemLabel="Es Concialiable?" />
+
+			<p:outputLabel for="cmbDebHabTipMov" value="Tipo Asiento:" />
+			<p:selectOneRadio id="cmbDebHabTipMov" unselectable="true">
+				<f:selectItem itemLabel="Debe" itemValue="D" />
+				<f:selectItem itemLabel="Haber" itemValue="H" />
+			</p:selectOneRadio>
+
+		</p:panelGrid>
+		<br></br>
+		<p:dataTable id="datTabTipMov">
+			<p:column headerText="Módulo"></p:column>
+			<p:column headerText="Nombre"></p:column>
+			<p:column headerText="Abreviatura"></p:column>
+			<p:column headerText="Concialiable"></p:column>
+			<p:column headerText="Tipo Asiento"></p:column>
+		</p:dataTable>
+
+	</ui:define>
+
+</ui:composition>
