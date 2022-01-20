@@ -19,22 +19,25 @@
 		<div class="p-col-12">
 			<p:graphicImage library="img" name="bannerFuerzasArmadas.jpg" />
 		</div>
-		<div class="p-col-4">
-			<p:slideMenu style="width:200px">
-				<p:submenu label="Administración">
-					<p:menuitem value="Tipo movimiento" outcome="tipoMovimiento"
-						icon="pi pi-upload" />
-				</p:submenu>
-			</p:slideMenu>
+		<div class="p-col-12">
+			<div class="p-col-4">
+				<p:slideMenu style="width:200px">
+					<p:submenu label="Administración">
+						<p:menuitem value="Tipo movimiento"  outcome="tipoMovimiento"
+							icon="pi pi-upload" />
+					</p:submenu>
+				</p:slideMenu>
+			</div>
+			<div class="p-col-8">
+				<h:form id="frmGen">
+					<p:growl id="menGen" />
+					<ui:insert name="contenido">
+						<p:graphicImage library="img" name="principalRRHH.png" />
+					</ui:insert>
+				</h:form>
+			</div>
 		</div>
-		<div class="p-col-8">
-			<h:form id="frmGen">
-				<p:growl id="menGen"/>
-				<ui:insert name="contenido">
-					<p:graphicImage library="img" name="principalRRHH.png" />
-				</ui:insert>
-			</h:form>
-		</div>
+
 	</div>
 
 </h:body>

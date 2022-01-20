@@ -20,35 +20,54 @@
 		<br></br>
 		<p:panelGrid id="panGriTipMov" columns="4" layout="grid">
 			<p:outputLabel for="selOneRadModMov" value="Módulo:" />
-			<p:selectOneRadio id="selOneRadModMov" unselectable="true">
+			<p:selectOneRadio id="selOneRadModMov" unselectable="true"
+				value="#{tipoMovimientoBean.tipoMovimiento.tmoModulo}">
 				<f:selectItem itemLabel="Contabilidad" itemValue="C" />
 				<f:selectItem itemLabel="Tesorería" itemValue="T" />
 			</p:selectOneRadio>
 
 			<p:outputLabel for="txtNomTipMov" value="Nombre:" />
-			<p:inputText id="txtNomTipMov" maxlength="100" required="true" />
+			<p:inputText id="txtNomTipMov" maxlength="100" required="true"
+				value="#{tipoMovimientoBean.tipoMovimiento.tmoNombre}" />
 
 			<p:outputLabel for="txtAbreTipMov" value="Abreviatura:" />
-			<p:inputText id="txtAbreTipMov" maxlength="3" required="true" />
+			<p:inputText id="txtAbreTipMov" maxlength="3" required="true"
+				value="#{tipoMovimientoBean.tipoMovimiento.tmoAbrevia}" />
 
 			<p:outputLabel for="selBolConTipMov" value="Conciliable:" />
 			<p:selectBooleanCheckbox id="selBolConTipMov"
-				itemLabel="Es Concialiable?" />
+				itemLabel="Es Concialiable?"
+				value="#{tipoMovimientoBean.tipoMovimiento.tmoConciliable}" />
 
 			<p:outputLabel for="cmbDebHabTipMov" value="Tipo Asiento:" />
-			<p:selectOneRadio id="cmbDebHabTipMov" unselectable="true">
+			<p:selectOneRadio id="cmbDebHabTipMov" unselectable="true"
+				value="#{tipoMovimientoBean.tipoMovimiento.tmoDebhab}">
 				<f:selectItem itemLabel="Debe" itemValue="D" />
 				<f:selectItem itemLabel="Haber" itemValue="H" />
 			</p:selectOneRadio>
 
 		</p:panelGrid>
 		<br></br>
-		<p:dataTable id="datTabTipMov">
-			<p:column headerText="Módulo"></p:column>
-			<p:column headerText="Nombre"></p:column>
-			<p:column headerText="Abreviatura"></p:column>
-			<p:column headerText="Concialiable"></p:column>
-			<p:column headerText="Tipo Asiento"></p:column>
+		<p:dataTable id="datTabTipMov"
+			value="#{tipoMovimientoBean.listaTipoMovimiento}" var="tipMov"
+			rowKey="#{tipMov.tmoCodigo}" selectionMode="single" paginator="true"
+			rows="10">
+			<p:column headerText="Módulo">
+				<h:outputText value="#{tipMov.tmoModulo}" />
+			</p:column>
+			<p:column headerText="Nombre" filterBy="#{tipMov.tmoNombre}"
+				filterMatchMode="contains">
+				<h:outputText value="#{tipMov.tmoNombre}" />
+			</p:column>
+			<p:column headerText="Abreviatura">
+				<h:outputText value="#{tipMov.tmoAbrevia}" />
+			</p:column>
+			<p:column headerText="Concialiable">
+				<h:outputText value="#{tipMov.tmoConciliable}" />
+			</p:column>
+			<p:column headerText="Tipo Asiento">
+				<h:outputText value="#{tipMov.tmoDebhab}" />
+			</p:column>
 		</p:dataTable>
 
 	</ui:define>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16426923618250" configfile="/rrhh-web/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="principal.xhtml" x="216" y="288" id="pf16426925361994" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16426925361995" path="/pages/principal.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/admin/tipoMovimiento.xhtml" x="600" y="264" id="pf16426925361996" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16426925361995" path="/pages/admin/tipoMovimiento.xhtml"/>
+  <links id="pf16426925361995" target="pf16426925361996" source="pf16426925361994" outcome="tipoMovimiento"/>
+</pageflow:Pageflow>
